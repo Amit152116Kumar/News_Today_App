@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">News Today</string>
+    <string name="spacex">SpaceX Starlink Launch Schedule: Details about Falcon 9 rocket, live stream and more - Republic World</string>
+    <string name="source">Source: &#160;</string>
+    <string name="saurabh_pant">Saurabh Pant</string>
+    <string name="_2021_01_18">2021–01–18</string>
+    <string name="date">Published: &#160;</string>
+    <string name="menu_bar">Menu Bar</string>
+    <string name="settings">Settings</string>
+    <string name="search">Search</string>
+    <string name="theme">Theme</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="sources">Sources</string>
+    <string name="chat">Chat</string>
+    <string name="amit15116_gmail_com">amit15116@gmail.com</string>
+    <string name="developed_by_amit_kumar">Developed by: Amit Kumar</string>
+    <string name="amit_kumar">Amit Kumar</string>
+
+
+</resources>

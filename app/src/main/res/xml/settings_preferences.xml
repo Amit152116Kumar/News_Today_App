@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/settings">
+
+
+    <PreferenceCategory
+        android:title="Display"
+        android:key="display">
+        <ListPreference
+            android:dialogTitle="Choose Country"
+            android:defaultValue="in"
+            android:entries="@array/count_entries"
+            android:entryValues="@array/count_values"
+            android:key="country"
+            android:title="Country"
+            android:negativeButtonText="CANCEL"
+            android:positiveButtonText="OK"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:dialogTitle="Choose Theme"
+            android:icon="@drawable/ic_light_mode_24"
+            android:defaultValue="default"
+            android:entries="@array/theme_entries"
+            android:entryValues="@array/theme_values"
+            android:key="Theme"
+            android:title="Theme"
+            android:negativeButtonText="CANCEL"
+            android:positiveButtonText="OK"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="About"
+        android:key="about">
+        <Preference
+            android:key="Version"
+            android:title="Build Version"
+            android:summary="1.0.1"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
