@@ -72,8 +72,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/drawer_menu"
-        android:background="?attr/colorSurface">
+        app:menu="@menu/drawer_menu">
         <ImageView
             android:layout_margin="20dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"

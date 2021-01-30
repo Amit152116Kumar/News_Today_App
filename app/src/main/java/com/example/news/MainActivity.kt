@@ -83,7 +83,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 true
             }
             R.id.search->{
-
+                Toast.makeText(this, "Search button is clicked", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.sort_by->{
+                Toast.makeText(this, "Sort button is clicked", Toast.LENGTH_SHORT).show()
                 true
             }
             else -> super.onOptionsItemSelected(item)
