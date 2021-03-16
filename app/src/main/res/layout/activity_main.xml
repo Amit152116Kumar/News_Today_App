@@ -5,19 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
-    tools:context=".MainActivity"
-    tools:openDrawer="start">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:id="@+id/fragment_container">
+        android:orientation="vertical">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:elevation="4dp">
+            android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -39,32 +36,30 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/app_name"
+                    android:textColor="?attr/colorOnPrimary"
                     android:textAppearance="@style/TextAppearance.AppCompat.Title"
                     android:textSize="@dimen/text_size" />
 
 
             </androidx.appcompat.widget.Toolbar>
-
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tablayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="?attr/colorPrimary"
-                app:tabIndicatorColor="?attr/colorPrimaryVariant"
-                app:tabMode="scrollable"
-                app:tabSelectedTextColor="?attr/colorOnBackground" />
         </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/view_pager"
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal" />
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:itemIconTint="@drawable/bottom_navigation_style"
+            app:itemTextColor="@drawable/bottom_navigation_style"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_menu" />
 
     </LinearLayout>
-
-
-    <!-- Your contents -->
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation"
@@ -83,5 +78,6 @@
             tools:ignore="ContentDescription" />
 
     </com.google.android.material.navigation.NavigationView>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

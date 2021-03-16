@@ -1,4 +1,4 @@
-package com.example.news.fragments
+package com.example.news.news_categories
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,33 +9,30 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.news.FragmentViewModel
 import com.example.news.adapters.RecyclerViewAdapter
 import com.example.news.databinding.FragmentViewBinding
-import kotlinx.coroutines.*
+import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 
-
-class BlankFragment : Fragment() {
-
-    private val category = "business"
-    private lateinit var viewmodel:FragmentViewModel
-    private lateinit var binding: FragmentViewBinding
-
+class Health : Fragment() {
+    private val category = "health"
+    private lateinit var viewmodel: FragmentViewModel
+    private var _binding: FragmentViewBinding? = null
+    private val binding get() = _binding!!
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewmodel= ViewModelProvider(requireActivity()).get(FragmentViewModel::class.java)
+        viewmodel = ViewModelProvider(requireActivity()).get(FragmentViewModel::class.java)
     }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        binding = FragmentViewBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
+        _binding = FragmentViewBinding.inflate(inflater, container, false)
         return binding.root
     }
-
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -56,6 +53,4 @@ class BlankFragment : Fragment() {
 //            binding.refresh.isRefreshing = false
 //        }
     }
-
-
 }

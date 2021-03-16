@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchFragment">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/search_bar_background"
+        android:inputType="text"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toStartOf="@id/filter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryHint="@string/search" />
+
+    <ImageView
+        android:id="@+id/filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_filter_alt_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/search_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/search_bar" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/search_bar" />
+
+    <TextView
+        android:id="@+id/topChannels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/top_channels"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.WindowTitle"
+        app:layout_constraintStart_toStartOf="@id/search_bar"
+        app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+    <TextView
+        android:id="@+id/showChannels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:text="@string/show_all"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.SearchResult.Subtitle"
+        android:textColor="?attr/colorSecondary"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/topChannels"
+        app:layout_constraintEnd_toEndOf="@id/filter" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="@id/showChannels"
+        app:layout_constraintStart_toStartOf="@+id/topChannels"
+        app:layout_constraintTop_toBottomOf="@id/topChannels"
+        tools:listitem="@layout/list_item_view_2" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="16dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view" />
+
+    <TextView
+        android:id="@+id/hotNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/hot_news"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.WindowTitle"
+        app:layout_constraintStart_toStartOf="@id/search_bar"
+        app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+    <TextView
+        android:id="@+id/showNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:text="@string/show_all"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.SearchResult.Subtitle"
+        android:textColor="?attr/colorSecondary"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hotNews"
+        app:layout_constraintEnd_toEndOf="@id/showChannels" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="@id/showNews"
+        app:layout_constraintStart_toStartOf="@+id/hotNews"
+        app:layout_constraintTop_toBottomOf="@id/hotNews"
+        tools:listitem="@layout/list_item_view_2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.news.fragments
+package com.example.news.news_categories
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,10 +13,12 @@ import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class HealthFragment : Fragment() {
-    private val category = "health"
+
+class Entertainment : Fragment() {
+    private val category = "entertainment"
     private lateinit var viewmodel: FragmentViewModel
-    private lateinit var binding: FragmentViewBinding
+    private var _binding: FragmentViewBinding? = null
+    private val binding get() = _binding!!
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +31,7 @@ class HealthFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentViewBinding.inflate(inflater, container, false)
+        _binding = FragmentViewBinding.inflate(inflater, container, false)
         return binding.root
     }
 
