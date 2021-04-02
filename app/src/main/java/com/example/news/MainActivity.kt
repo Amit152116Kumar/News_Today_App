@@ -98,12 +98,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (item.itemId) {
             R.id.home_menu -> {
                 supportFragmentManager.beginTransaction()
+                    .setCustomAnimations(R.anim.slide_in, R.anim.fade_out,
+                        R.anim.fade_in, R.anim.slide_out)
                     .replace(R.id.fragment_container, HomeFragment()).commit()
                 binding.drawerLayout.closeDrawer(GravityCompat.START)
                 return true
             }
             R.id.source_menu -> {
                 supportFragmentManager.beginTransaction()
+                    .setCustomAnimations(R.anim.slide_in, R.anim.fade_out,
+                        R.anim.fade_in, R.anim.slide_out)
                     .replace(R.id.fragment_container, SourcesFragment()).commit()
                 binding.drawerLayout.closeDrawer(GravityCompat.START)
                 return true
@@ -115,6 +119,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.search -> {
                 supportFragmentManager.beginTransaction()
+                    .setCustomAnimations(R.anim.slide_in, R.anim.fade_out,
+                        R.anim.fade_in, R.anim.slide_out)
                     .replace(R.id.fragment_container, SearchFragment()).commit()
                 return true
             }
