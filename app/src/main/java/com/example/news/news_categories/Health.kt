@@ -48,9 +48,15 @@ class Health : Fragment() {
         }
 
 
-//        binding.refresh.setOnRefreshListener {
-//
-//            binding.refresh.isRefreshing = false
-//        }
+        binding.refresh.setOnRefreshListener {
+
+            MainScope().launch {
+                viewmodel.topHeadlines(category).collect {
+                    mAdapter.updateNews(it)
+                }
+            }
+
+            binding.refresh.isRefreshing = false
+        }
     }
 }

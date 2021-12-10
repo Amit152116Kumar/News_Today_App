@@ -18,11 +18,11 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val fragmentList = listOf(
-        Business(), Entertainment(), General(), Health(),
-        Science(), Sports(), Technology()
+        Business(), Science(), Sports(), Technology(),
+        Health()
     )
     private val fragmentTitle =
-        listOf("Business", "Entertainment", "General", "Health", "Science", "Sports", "Technology")
+        listOf("Business", "Science", "Sports", "Technology", "Health")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

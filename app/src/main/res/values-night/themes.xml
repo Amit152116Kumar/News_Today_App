@@ -9,7 +9,7 @@
 
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/purple_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorSecondaryVariant">@color/gray_300</item>
 
         <!-- Surface brand color. -->
         <item name="colorSurface">@color/dark_grey</item>

@@ -12,9 +12,10 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         app:tabBackground="?attr/colorPrimary"
-        app:tabIndicatorColor="?attr/colorPrimaryVariant"
+        app:tabIndicatorColor="?attr/colorSecondary"
+        app:tabSelectedTextColor="?attr/colorSecondary"
         app:tabMode="scrollable"
-        app:tabSelectedTextColor="?attr/colorOnBackground" />
+        app:tabTextColor="?attr/colorOnBackground" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"

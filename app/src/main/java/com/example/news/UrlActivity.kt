@@ -8,7 +8,6 @@ import android.view.WindowManager
 import android.webkit.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.example.news.databinding.ActivityUrlBinding
 
 class UrlActivity : AppCompatActivity() {
@@ -34,7 +33,6 @@ class UrlActivity : AppCompatActivity() {
         // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         // finally change the color
-        window.statusBarColor = ContextCompat.getColor(this, R.color.white)
 
 
 

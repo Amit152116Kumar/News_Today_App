@@ -18,11 +18,11 @@ class FragmentViewModel(application: Application) :AndroidViewModel(application)
     private lateinit var lang: String
     private val retrofitClient = RetrofitClient()
 
-    fun topHeadlines(category: String): Flow<List<Article>> = flow {
+    fun topHeadlines(category: String): Flow<ArrayList<Article>> = flow {
         val response = retrofitClient.api.getTopHeadlines(category = category,
             pageSize = 100,
             country = country)
-        val articles: List<Article>? = response.body()?.articles
+        val articles: ArrayList<Article>? = response.body()?.articles
         if (articles != null) {
             emit(articles)
         }

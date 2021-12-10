@@ -5,9 +5,9 @@ import com.google.gson.annotations.SerializedName
 
 data class NewsResponse(
     @SerializedName("articles")
-    val articles: List<Article> = listOf<Article>(),
+    val articles: ArrayList<Article> = arrayListOf<Article>(),
     @SerializedName("status")
     val status: String = "",
     @SerializedName("totalResults")
-    val totalResults: Int = 0
+    val totalResults: Int = 0,
 )

@@ -18,7 +18,7 @@ import com.example.news.databinding.ListItemView2Binding
 
 class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var items = listOf<Article>()
+    private var items = arrayListOf<Article>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return if (viewType == 0) {
@@ -53,7 +53,7 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         return items.size
     }
 
-    fun updateNews(updatedItems: List<Article>) {
+    fun updateNews(updatedItems: ArrayList<Article>) {
         items = updatedItems
         notifyDataSetChanged()
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorPrimaryVariant"
     tools:context=".UrlActivity">
 
     <ImageView
@@ -33,7 +34,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="@string/source"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

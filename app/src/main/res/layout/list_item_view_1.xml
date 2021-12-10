@@ -25,7 +25,11 @@
         android:layout_marginHorizontal="20dp"
         android:text="@string/spacex"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textColor="@color/white"
+        android:shadowColor="?attr/colorPrimaryVariant"
+        android:shadowDx="-5"
+        android:shadowDy="-5"
+        android:shadowRadius="5"
+        android:textColor="?attr/colorOnPrimary"
         android:textSize="@dimen/heading_size"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/layout"
@@ -47,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/source"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorOnPrimary"
             android:textSize="@dimen/footer_size"
             android:textStyle="bold" />
 
@@ -57,14 +61,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/saurabh_pant"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorOnPrimary"
             android:textSize="@dimen/footer_size" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/date"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorOnPrimary"
             android:textSize="@dimen/footer_size"
             android:textStyle="bold" />
 
@@ -74,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:text="@string/_2021_01_18"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorOnPrimary"
             android:textSize="@dimen/footer_size" />
 
     </LinearLayout>
